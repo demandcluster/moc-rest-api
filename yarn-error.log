@@ -1,0 +1,56 @@
+Arguments: 
+  /home/cluster/.nvm/versions/node/v16.6.1/bin/node /home/cluster/.nvm/versions/node/v16.6.1/bin/yarn add sofa-api
+
+PATH: 
+  /home/cluster/.nvm/versions/node/v16.6.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+Yarn version: 
+  1.22.11
+
+Node version: 
+  16.6.1
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: Failed to replace env in config: ${NPM_TOKEN}
+      at /home/cluster/.nvm/versions/node/v16.6.1/lib/node_modules/yarn/lib/cli.js:98884:13
+      at String.replace (<anonymous>)
+      at envReplace (/home/cluster/.nvm/versions/node/v16.6.1/lib/node_modules/yarn/lib/cli.js:98879:16)
+      at Function.normalizeConfig (/home/cluster/.nvm/versions/node/v16.6.1/lib/node_modules/yarn/lib/cli.js:31891:69)
+      at NpmRegistry.<anonymous> (/home/cluster/.nvm/versions/node/v16.6.1/lib/node_modules/yarn/lib/cli.js:31921:34)
+      at Generator.next (<anonymous>)
+      at step (/home/cluster/.nvm/versions/node/v16.6.1/lib/node_modules/yarn/lib/cli.js:310:30)
+      at /home/cluster/.nvm/versions/node/v16.6.1/lib/node_modules/yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "moc-rest-api",
+    "version": "0.0.0",
+    "description": "Mailchimp Open Commerce REST API",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/demandcluster/moc-rest-api.git"
+    },
+    "keywords": [
+      "moc",
+      "reaction"
+    ],
+    "author": "Ron W. van Etten",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/demandcluster/moc-rest-api/issues"
+    },
+    "homepage": "https://github.com/demandcluster/moc-rest-api#readme"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
