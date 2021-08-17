@@ -10,7 +10,8 @@
     "lint:gql": "graphql-schema-linter ./schema.graphql",
     "start": "node  ./index.js",
     "start:dev": "nodemon",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "semantic-release": "semantic-release"
   },
   "repository": {
     "type": "git",
