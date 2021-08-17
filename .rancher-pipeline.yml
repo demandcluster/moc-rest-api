@@ -19,7 +19,7 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: '@demandcluster/moc-rest-api:latest'
+      tag: '@demandcluster/moc-rest-api:v0.0.0'
       pushRemote: true
       registry: harbor.demandcluster.com
 timeout: 60
