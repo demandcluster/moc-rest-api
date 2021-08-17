@@ -1,0 +1,7 @@
+mutation ExportInsert($input: FeedInput!){
+    ExportInsert(input: $input){
+        errors
+        insertedId
+        success
+    }
+}

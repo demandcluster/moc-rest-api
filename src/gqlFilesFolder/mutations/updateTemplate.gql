@@ -1,0 +1,14 @@
+mutation updateTemplate($input: UpdateTemplateInput!){
+    updateTemplate(input: $input){
+        clientMutationId
+        template{
+            _id
+            language
+            name
+            shopId
+            subject
+            template
+            title
+        }
+    }
+}

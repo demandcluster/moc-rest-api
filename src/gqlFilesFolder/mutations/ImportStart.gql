@@ -1,0 +1,7 @@
+mutation ImportStart($input: IDfield!){
+    ImportStart(input: $input){
+        errors
+        insertedId
+        success
+    }
+}

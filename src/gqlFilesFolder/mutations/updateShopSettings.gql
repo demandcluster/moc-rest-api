@@ -1,0 +1,17 @@
+mutation updateShopSettings($input: UpdateShopSettingsInput!){
+    updateShopSettings(input: $input){
+        clientMutationId
+        shopSettings{
+            doNotUse
+            canSellVariantWithoutInventory
+            isShippingRatesFulfillmentEnabled
+            defaultTaxCode
+            fallbackTaxServiceName
+            primaryTaxServiceName
+            shouldNavigationTreeItemsBeAdminOnly
+            shouldNavigationTreeItemsBePubliclyVisible
+            shouldNavigationTreeItemsBeSecondaryNavOnly
+            sitemapRefreshPeriod
+        }
+    }
+}

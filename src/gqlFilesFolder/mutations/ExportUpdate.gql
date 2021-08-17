@@ -1,0 +1,7 @@
+mutation ExportUpdate($input: Feedupdate!){
+    ExportUpdate(input: $input){
+        errors
+        insertedId
+        success
+    }
+}

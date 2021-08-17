@@ -1,0 +1,27 @@
+query ImportFeed($input: IDfields){
+    ImportFeed(input: $input){
+        errors
+        nodes{
+            companyId
+            crontxt
+            doubles
+            feedId
+            items
+            lastrun
+            loopon
+            mapfieldcount
+            mapfields
+            minute
+            modified
+            name
+            rulescount
+            status
+            tookSeconds
+            type
+            unique
+            url
+            userId
+        }
+        totalCount
+    }
+}

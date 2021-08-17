@@ -1,0 +1,7 @@
+query GetStruct($input: ShopInput!){
+    GetStruct(input: $input){
+        companyId
+        errors
+        struct
+    }
+}

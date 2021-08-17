@@ -1,0 +1,7 @@
+mutation SaveMapping($input: SaveJSONexport!){
+    SaveMapping(input: $input){
+        errors
+        insertedId
+        success
+    }
+}

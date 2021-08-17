@@ -1,0 +1,12 @@
+mutation removeTagsFromProducts($input: ProductTagsOperationInput!){
+    removeTagsFromProducts(input: $input){
+        clientMutationId
+        foundCount
+        notFoundCount
+        updatedCount
+        writeErrors{
+            documentId
+            errorMsg
+        }
+    }
+}

@@ -1,0 +1,7 @@
+mutation updateApiKey($input: UpdateApiKeyInput!){
+    updateApiKey(input: $input){
+        apiKey
+        clientMutationId
+        title
+    }
+}

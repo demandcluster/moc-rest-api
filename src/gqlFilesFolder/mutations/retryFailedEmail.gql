@@ -1,0 +1,6 @@
+mutation retryFailedEmail($input: RetryFailedEmailInput!){
+    retryFailedEmail(input: $input){
+        clientMutationId
+        emailSent
+    }
+}

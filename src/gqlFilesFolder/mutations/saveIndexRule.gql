@@ -1,0 +1,7 @@
+mutation saveIndexRule($input: editJSON!){
+    saveIndexRule(input: $input){
+        errors
+        insertedId
+        success
+    }
+}

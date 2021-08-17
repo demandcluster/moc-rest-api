@@ -1,0 +1,6 @@
+mutation updateProductsVisibility($input: UpdateProductsVisibilityInput!){
+    updateProductsVisibility(input: $input){
+        clientMutationId
+        updatedCount
+    }
+}

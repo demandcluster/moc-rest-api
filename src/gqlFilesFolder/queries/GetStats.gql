@@ -1,0 +1,15 @@
+query GetStats($input: InputStats){
+    GetStats(input: $input){
+        category
+        channel
+        created
+        data
+        doubles
+        errorinfo
+        errors
+        items
+        logId
+        timetook
+        type
+    }
+}

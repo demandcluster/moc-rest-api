@@ -1,0 +1,20 @@
+mutation enablePaymentMethodForShop($input: EnablePaymentMethodForShopInput!){
+    enablePaymentMethodForShop(input: $input){
+        clientMutationId
+        paymentMethods{
+            canRefund
+            data{
+                ... on FakeData {
+                    doNotUse
+                }
+                ... on ExampleIOUPaymentMethodData {
+                    example
+                }
+            }
+            displayName
+            isEnabled
+            name
+            pluginName
+        }
+    }
+}

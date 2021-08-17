@@ -1,0 +1,43 @@
+mutation updateSurcharge($language: String!, $input: UpdateSurchargeInput!){
+    updateSurcharge(input: $input){
+        clientMutationId
+        surcharge{
+            _id
+            amount{
+                amount
+                currency{
+                    _id
+                    code
+                    decimal
+                    format
+                    rate
+                    scale
+                    symbol
+                    thousand
+                }
+                displayAmount
+            }
+            attributes{
+                operator
+                property
+                propertyType
+                value
+            }
+            createdAt
+            destination{
+                country
+                postal
+                region
+            }
+            message(language: $language)
+            messagesByLanguage{
+                content
+                language
+            }
+            methodIds
+            shopId
+            type
+            updatedAt
+        }
+    }
+}

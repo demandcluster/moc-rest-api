@@ -1,0 +1,8 @@
+mutation updateGlobalSettings($input: UpdateGlobalSettingsInput!){
+    updateGlobalSettings(input: $input){
+        clientMutationId
+        globalSettings{
+            doNotUse
+        }
+    }
+}

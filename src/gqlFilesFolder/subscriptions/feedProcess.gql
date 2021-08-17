@@ -1,0 +1,11 @@
+subscription feedProcess($channel: InputStats){
+    feedProcess(channel: $channel){
+        count
+        errors
+        feedId
+        inserted
+        lastrun
+        status
+        timestamp
+    }
+}

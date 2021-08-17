@@ -1,0 +1,7 @@
+mutation RemoveRule($input: RemoveJSON!){
+    RemoveRule(input: $input){
+        errors
+        insertedId
+        success
+    }
+}

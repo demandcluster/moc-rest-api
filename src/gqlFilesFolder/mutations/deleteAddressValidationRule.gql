@@ -1,0 +1,13 @@
+mutation deleteAddressValidationRule($input: DeleteAddressValidationRuleInput!){
+    deleteAddressValidationRule(input: $input){
+        addressValidationRule{
+            _id
+            countryCodes
+            createdAt
+            serviceName
+            shopId
+            updatedAt
+        }
+        clientMutationId
+    }
+}

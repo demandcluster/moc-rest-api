@@ -1,0 +1,7 @@
+mutation ExportCron($input: Cronupdate!){
+    ExportCron(input: $input){
+        errors
+        insertedId
+        success
+    }
+}

@@ -1,0 +1,6 @@
+query taxCodes($shopId: ID!){
+    taxCodes(shopId: $shopId){
+        code
+        label
+    }
+}

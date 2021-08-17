@@ -1,0 +1,7 @@
+mutation ImportUpdate($input: Feedupdate!){
+    ImportUpdate(input: $input){
+        errors
+        insertedId
+        success
+    }
+}

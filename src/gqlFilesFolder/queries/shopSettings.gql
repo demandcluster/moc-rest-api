@@ -1,0 +1,14 @@
+query shopSettings($shopId: ID!){
+    shopSettings(shopId: $shopId){
+        doNotUse
+        canSellVariantWithoutInventory
+        isShippingRatesFulfillmentEnabled
+        defaultTaxCode
+        fallbackTaxServiceName
+        primaryTaxServiceName
+        shouldNavigationTreeItemsBeAdminOnly
+        shouldNavigationTreeItemsBePubliclyVisible
+        shouldNavigationTreeItemsBeSecondaryNavOnly
+        sitemapRefreshPeriod
+    }
+}

@@ -1,0 +1,11 @@
+query GetFeedProcess($channel: InputStats){
+    GetFeedProcess(channel: $channel){
+        count
+        errors
+        feedId
+        inserted
+        lastrun
+        status
+        timestamp
+    }
+}

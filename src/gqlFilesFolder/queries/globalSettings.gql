@@ -1,0 +1,5 @@
+query globalSettings{
+    globalSettings{
+        doNotUse
+    }
+}

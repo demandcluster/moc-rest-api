@@ -1,0 +1,7 @@
+mutation saveUserStruct($input: SaveStruct!){
+    saveUserStruct(input: $input){
+        errors
+        insertedId
+        success
+    }
+}

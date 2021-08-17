@@ -1,0 +1,16 @@
+mutation recalculateReservedSimpleInventory($input: RecalculateReservedSimpleInventoryInput!){
+    recalculateReservedSimpleInventory(input: $input){
+        clientMutationId
+        inventoryInfo{
+            canBackorder
+            inventoryInStock
+            inventoryReserved
+            isEnabled
+            lowInventoryWarningThreshold
+            productConfiguration{
+                productId
+                productVariantId
+            }
+        }
+    }
+}

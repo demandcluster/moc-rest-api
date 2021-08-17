@@ -1,0 +1,7 @@
+mutation ImportDelete($input: IDfield!){
+    ImportDelete(input: $input){
+        errors
+        insertedId
+        success
+    }
+}

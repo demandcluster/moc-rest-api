@@ -1,0 +1,12 @@
+mutation addTagsToProducts($input: ProductTagsOperationInput!){
+    addTagsToProducts(input: $input){
+        clientMutationId
+        foundCount
+        notFoundCount
+        updatedCount
+        writeErrors{
+            documentId
+            errorMsg
+        }
+    }
+}

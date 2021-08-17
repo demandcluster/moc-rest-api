@@ -1,0 +1,9 @@
+{"endpoints": {
+	"/items": {  
+		"get": {     
+			"operation": "catalogItems"
+		}
+	}
+}
+}
+

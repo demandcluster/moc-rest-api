@@ -1,0 +1,30 @@
+query GetChannels($input: IDchannelsearch){
+    GetChannels(input: $input){
+        errors
+        nodes{
+            channel
+            channelId
+            channel_market
+            country
+            errors
+            extraInfo{
+                description
+                example
+                from
+                order
+                status
+                to
+            }
+            mapping{
+                description
+                example
+                from
+                order
+                status
+                to
+            }
+            type
+        }
+        totalCount
+    }
+}

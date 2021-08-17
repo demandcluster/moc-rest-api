@@ -38,8 +38,9 @@
     "fs": "^0.0.1-security",
     "git-cz": "^4.7.6",
     "graphql": "^15.5.1",
+    "graphql2rest": "^0.6.4",
     "node-fetch": "^2.6.1",
-    "sofa-api": "^0.11.0"
+    "nodemod": "^2.8.4"
   },
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",

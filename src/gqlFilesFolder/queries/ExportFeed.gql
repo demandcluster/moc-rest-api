@@ -1,0 +1,30 @@
+query ExportFeed($input: IDfields){
+    ExportFeed(input: $input){
+        errors
+        nodes{
+            channel
+            companyId
+            crontxt
+            currency
+            feedId
+            items
+            lastrun
+            loopon
+            mapfieldcount
+            mapfields
+            minute
+            modified
+            name
+            rulescount
+            status
+            title
+            token
+            tookSeconds
+            type
+            unique
+            url
+            userId
+        }
+        totalCount
+    }
+}

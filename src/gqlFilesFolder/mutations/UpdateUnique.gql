@@ -1,0 +1,7 @@
+mutation UpdateUnique($input: UniqueField){
+    UpdateUnique(input: $input){
+        errors
+        insertedId
+        success
+    }
+}

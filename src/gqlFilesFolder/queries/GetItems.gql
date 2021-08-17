@@ -1,0 +1,24 @@
+query GetItems($input: ItemFilter){
+    GetItems(input: $input){
+        beforeCount
+        errors
+        nodes{
+            DJS_created
+            DJS_feedId
+            DJS_modified
+            DJS_status
+            brand
+            category
+            description
+            ean
+            feedName
+            fullJSON
+            id
+            image
+            msrp
+            price
+            title
+        }
+        totalCount
+    }
+}

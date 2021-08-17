@@ -1,0 +1,23 @@
+query refunds($orderId: ID!, $shopId: ID!, $token: String){
+    refunds(orderId: $orderId, shopId: $shopId, token: $token){
+        _id
+        amount{
+            amount
+            currency{
+                _id
+                code
+                decimal
+                format
+                rate
+                scale
+                symbol
+                thousand
+            }
+            displayAmount
+        }
+        createdAt
+        paymentDisplayName
+        paymentId
+        reason
+    }
+}

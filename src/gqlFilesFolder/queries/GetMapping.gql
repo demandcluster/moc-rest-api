@@ -1,0 +1,22 @@
+query GetMapping($input: IDchannelfield!){
+    GetMapping(input: $input){
+        CDNimage
+        _id
+        active
+        attributes
+        categorySeparator
+        channel
+        channelId
+        companyId
+        count
+        data
+        description
+        domain
+        feedId
+        groupBy
+        index
+        name
+        percent
+        userId
+    }
+}

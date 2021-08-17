@@ -1,0 +1,19 @@
+query getFlatRateFulfillmentRestriction($restrictionId: ID!, $shopId: ID!){
+    getFlatRateFulfillmentRestriction(restrictionId: $restrictionId, shopId: $shopId){
+        _id
+        attributes{
+            operator
+            property
+            propertyType
+            value
+        }
+        destination{
+            country
+            postal
+            region
+        }
+        methodIds
+        shopId
+        type
+    }
+}

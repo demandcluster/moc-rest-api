@@ -1,0 +1,17 @@
+query paymentMethods($shopId: ID!){
+    paymentMethods(shopId: $shopId){
+        canRefund
+        data{
+            ... on FakeData {
+                doNotUse
+            }
+            ... on ExampleIOUPaymentMethodData {
+                example
+            }
+        }
+        displayName
+        isEnabled
+        name
+        pluginName
+    }
+}

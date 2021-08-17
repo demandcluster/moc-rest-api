@@ -1,0 +1,8 @@
+query GetItemsCategory($input: ShopInput!){
+    GetItemsCategory(input: $input){
+        category
+        count
+        errors
+        shopId
+    }
+}

@@ -1,0 +1,34 @@
+mutation createNavigationItem($input: CreateNavigationItemInput!){
+    createNavigationItem(input: $input){
+        clientMutationId
+        navigationItem{
+            _id
+            createdAt
+            data{
+                classNames
+                content{
+                    language
+                    value
+                }
+                contentForLanguage
+                isUrlRelative
+                shouldOpenInNewWindow
+                url
+            }
+            draftData{
+                classNames
+                content{
+                    language
+                    value
+                }
+                contentForLanguage
+                isUrlRelative
+                shouldOpenInNewWindow
+                url
+            }
+            hasUnpublishedChanges
+            metadata
+            shopId
+        }
+    }
+}

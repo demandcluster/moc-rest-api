@@ -1,0 +1,13 @@
+mutation createAddressValidationRule($input: CreateAddressValidationRuleInput!){
+    createAddressValidationRule(input: $input){
+        addressValidationRule{
+            _id
+            countryCodes
+            createdAt
+            serviceName
+            shopId
+            updatedAt
+        }
+        clientMutationId
+    }
+}

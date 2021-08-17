@@ -1,0 +1,9 @@
+mutation ImportInsert($input: FeedimportInput!){
+    ImportInsert(input: $input){
+        count
+        data
+        errors
+        feedId
+        type
+    }
+}

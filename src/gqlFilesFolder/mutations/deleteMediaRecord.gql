@@ -1,0 +1,24 @@
+mutation deleteMediaRecord($input: DeleteMediaRecordInput!){
+    deleteMediaRecord(input: $input){
+        clientMutationId
+        mediaRecord{
+            _id
+            metadata{
+                isArchived
+                ownerId
+                priority
+                productId
+                shopId
+                type
+                variantId
+            }
+            original{
+                name
+                size
+                type
+                updatedAt
+                uploadedAt
+            }
+        }
+    }
+}

@@ -1,0 +1,7 @@
+mutation ExportDelete($input: IDfield!){
+    ExportDelete(input: $input){
+        errors
+        insertedId
+        success
+    }
+}

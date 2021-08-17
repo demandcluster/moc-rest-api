@@ -1,0 +1,7 @@
+mutation ImportCron($input: Cronupdate!){
+    ImportCron(input: $input){
+        errors
+        insertedId
+        success
+    }
+}

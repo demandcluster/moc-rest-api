@@ -1,0 +1,7 @@
+mutation saveUserRule($input: SaveJSON!){
+    saveUserRule(input: $input){
+        errors
+        insertedId
+        success
+    }
+}

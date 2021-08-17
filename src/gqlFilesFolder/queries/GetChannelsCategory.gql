@@ -1,0 +1,9 @@
+query GetChannelsCategory($input: channelId){
+    GetChannelsCategory(input: $input){
+        catId
+        category
+        categoryId
+        errors
+        name
+    }
+}
