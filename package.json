@@ -4,7 +4,13 @@
   "description": "Mailchimp Open Commerce REST API",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "node ./buildSchema.js",
+    "lint": "eslint .",
+    "prettier-format": "prettier 'src/**/*.js' --write",
+    "lint:gql": "graphql-schema-linter ./schema.graphql",
+    "start": "node  ./index.js",
+    "start:dev": "nodemon",
+    "commit": "git-cz"
   },
   "repository": {
     "type": "git",
@@ -12,20 +18,68 @@
   },
   "keywords": [
     "moc",
-    "reaction"
+    "rest",
+    "graphql"
   ],
-  "author": "Ron W. van Etten",
+  "author": "DemandCluster <hello@demandcluster.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/demandcluster/moc-rest-api/issues"
   },
   "homepage": "https://github.com/demandcluster/moc-rest-api#readme",
   "dependencies": {
+    "@graphql-tools/schema": "^8.1.1",
+    "@reactioncommerce/api-utils": "^1.16.7",
+    "body-parser": "^1.19.0",
+    "chalk": "^4.1.2",
+    "envalid": "^7.2.1",
     "express": "^4.17.1",
-    "get-graphql-schema": "^2.1.2",
+    "express-graphql": "^0.12.0",
+    "fs": "^0.0.1-security",
+    "git-cz": "^4.7.6",
+    "graphql": "^15.5.1",
+    "node-fetch": "^2.6.1",
     "sofa-api": "^0.11.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/git": "^9.0.0",
+    "@semantic-release/release-notes-generator": "^9.0.3",
+    "eslint": "^7.32.0",
+    "graphql-schema-linter": "^2.0.1",
+    "husky": "^7.0.1",
+    "nodemon": "^2.0.12",
+    "prettier-format": "^3.0.3",
     "semantic-release": "^17.4.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm run prettier-format",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "graphql-schema-linter": {
+    "rules": [
+      "arguments-have-descriptions",
+      "deprecations-have-a-reason",
+      "descriptions-are-capitalized",
+      "enum-values-have-descriptions",
+      "enum-values-sorted-alphabetically",
+      "fields-have-descriptions",
+      "input-object-fields-sorted-alphabetically",
+      "input-object-values-have-descriptions",
+      "relay-connection-types-spec",
+      "relay-page-info-spec",
+      "type-fields-sorted-alphabetically",
+      "types-are-capitalized",
+      "types-have-descriptions"
+    ]
   }
 }
