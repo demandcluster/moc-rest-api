@@ -3,7 +3,7 @@ stages:
   steps:
   - runScriptConfig:
       image: node:latest
-      shellScript: npm i && npm run build
+      shellScript: yarn i && yarn run build
     env:
       NODE_ENV: production
     envFrom:
