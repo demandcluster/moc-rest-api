@@ -18,14 +18,15 @@ stages:
   steps:
   - runScriptConfig:
       image: node:latest
-      shellScript: yarn run semantic-release
+      shellScript: npx semantic-release
     envFrom:
     - sourceName: rest-api
       sourceKey: GRAPHQL_URL
     - sourceName: rest-api
       sourceKey: PORT
     - sourceName: cicd
-      sourceKey: GITHUB_TOKEN
+      sourceKey: DEVOPS_TOKEN
+      targetKey: GH_TOKEN
 - name: Publish
   steps:
   - publishImageConfig:
