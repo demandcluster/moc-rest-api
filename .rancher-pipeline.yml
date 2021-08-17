@@ -4,6 +4,8 @@ stages:
   - runScriptConfig:
       image: node:latest
       shellScript: npm i && npm run build
+    env:
+      NODE_ENV: production
     envFrom:
     - sourceName: rest-api
       sourceKey: GRAPHQL_URL
