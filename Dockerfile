@@ -1,4 +1,4 @@
-FROM node:12-alpine
+FROM node:16-alpine
 
 # hadolint ignore=DL3018
 RUN apk --no-cache add bash curl less tini vim make
