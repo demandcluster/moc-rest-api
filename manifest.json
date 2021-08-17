@@ -1,9 +1,8 @@
 {"endpoints": {
-	"/items/:searchQuery": {  
+	"/items": {  
 		"get": {     
 			"operation": "catalogItems"
 		}
 	}
 }
 }
-
