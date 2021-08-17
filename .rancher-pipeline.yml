@@ -14,13 +14,15 @@ stages:
   - runScriptConfig:
       image: node:latest
       shellScript: npm run lint
-- name: Publish
+- name: Release
   steps:
-  - publishImageConfig:
-      dockerfilePath: ./Dockerfile
-      buildContext: .
-      tag: '@demandcluster/moc-rest-api:latest'
-      pushRemote: true
-      registry: harbor.demandcluster.com
+  - runScriptConfig:
+      image: node:latest
+      shellScript: npm run semantic-release
+    envFrom:
+    - sourceName: rest-api
+      sourceKey: GRAPHQL_URL
+    - sourceName: rest-api
+      sourceKey: PORT
 timeout: 60
 notification: {}
