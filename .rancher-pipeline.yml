@@ -3,7 +3,7 @@ stages:
   steps:
   - runScriptConfig:
       image: node:latest
-      shellScript: yarn install && yarn run build
+      shellScript: yarn install --force && yarn run build
     env:
       NODE_ENV: development
     envFrom:
