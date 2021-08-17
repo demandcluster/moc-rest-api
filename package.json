@@ -30,7 +30,6 @@
   "homepage": "https://github.com/demandcluster/moc-rest-api#readme",
   "dependencies": {
     "@graphql-tools/schema": "^8.1.1",
-    "@reactioncommerce/api-utils": "^1.16.7",
     "body-parser": "^1.19.0",
     "chalk": "^4.1.2",
     "envalid": "^7.2.1",
