@@ -16,6 +16,16 @@ stages:
       shellScript: yarn install --production=false && yarn run lint
 - name: Publish
   steps:
+  - runScriptConfig:
+      image: node:latest
+      shellScript: yarn run build
+    env:
+      NODE_ENVIRONMENT: development
+    envFrom:
+    - sourceName: rest-api
+      sourceKey: GRAPHQL_URL
+    - sourceName: rest-api
+      sourceKey: PORT
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
