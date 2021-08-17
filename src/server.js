@@ -1,6 +1,6 @@
 
 const express = require("express");
-const bodyParser = require("body-parser");
+//const bodyParser = require("body-parser");
 const schema = require("../schemas/index.js");
 const env = require("../config.js");
 const path = require('path');
@@ -12,8 +12,6 @@ const log = console.log;
 
 const GraphQL2REST = require('graphql2rest');
 const { execute } = require('graphql'); // or any GraphQL execute function (assumes apollo-link by default)
-
-
 
 const gqlGeneratorOutputFolder = path.resolve(__dirname, './gqlFilesFolder'); 
 const manifestFile = path.resolve(__dirname, '../manifest.json');
