@@ -14,19 +14,6 @@ stages:
   - runScriptConfig:
       image: node:latest
       shellScript: yarn install --production=false && yarn run lint
-- name: Release
-  steps:
-  - runScriptConfig:
-      image: node:latest
-      shellScript: npx semantic-release
-    envFrom:
-    - sourceName: rest-api
-      sourceKey: GRAPHQL_URL
-    - sourceName: rest-api
-      sourceKey: PORT
-    - sourceName: cicd
-      sourceKey: DEVOPS_TOKEN
-      targetKey: GH_TOKEN
 - name: Publish
   steps:
   - publishImageConfig:
