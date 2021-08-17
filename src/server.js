@@ -15,12 +15,12 @@ const server = () => {
   app.use(bodyParser.json());
   app.use(
     "/api",
-    useSofa({ basePath: "/api", schema: exSchema, depthLimit: 1 })
+    useSofa({ basePath: "/api", schema: exSchema })
   );
 
   app.listen(
     env.PORT,
-    log(chalk.blue(`DemandCluster MOC REST`)),
+    log(chalk.yellow(`DemandCluster MOC REST`)),
     log(
       chalk.green(
         `API Server running in ${env.NODE_ENV} mode on port ${env.PORT}`
