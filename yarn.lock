@@ -1405,6 +1405,11 @@
   "resolved" "https://registry.npmjs.org/core-js/-/core-js-2.6.12.tgz"
   "version" "2.6.12"
 
+"core-js@^3.16.1":
+  "integrity" "sha512-AAkP8i35EbefU+JddyWi12AWE9f2N/qr/pwnDtWz4nyUIBGMJPX99ANFFRSw6FefM374lDujdtLDyhN2A/btHw=="
+  "resolved" "https://registry.npmjs.org/core-js/-/core-js-3.16.1.tgz"
+  "version" "3.16.1"
+
 "core-util-is@~1.0.0", "core-util-is@1.0.2":
   "integrity" "sha1-tf1UIgqivFq1eqtxQMlAdUUDwac="
   "resolved" "https://npm.demandcluster.com/core-util-is/-/core-util-is-1.0.2.tgz"
