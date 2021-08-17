@@ -1,0 +1,30 @@
+stages:
+- name: Build
+  steps:
+  - runScriptConfig:
+      image: node:latest
+      shellScript: npm i && npm run build
+    env:
+      NODE_ENV: production
+    envFrom:
+    - sourceName: rest-api
+      sourceKey: GRAPHQL_URL
+    - sourceName: rest-api
+      sourceKey: PORT
+- name: Lint
+  steps:
+  - runScriptConfig:
+      image: node:latest
+      shellScript: npm run lint
+- name: Release
+  steps:
+  - runScriptConfig:
+      image: node:latest
+      shellScript: npm run semantic-release
+    envFrom:
+    - sourceName: rest-api
+      sourceKey: GRAPHQL_URL
+    - sourceName: rest-api
+      sourceKey: PORT
+timeout: 60
+notification: {}
