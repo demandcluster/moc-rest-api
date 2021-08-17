@@ -1,0 +1,26 @@
+stages:
+- name: Build
+  steps:
+  - runScriptConfig:
+      image: node:latest
+      shellScript: npm run build
+    envFrom:
+    - sourceName: rest-api
+      sourceKey: GRAPHQL_URL
+    - sourceName: rest-api
+      sourceKey: PORT
+- name: Lint
+  steps:
+  - runScriptConfig:
+      image: node:latest
+      shellScript: npm run lint
+- name: Publish
+  steps:
+  - publishImageConfig:
+      dockerfilePath: ./Dockerfile
+      buildContext: .
+      tag: '@demandcluster/moc-rest-api:latest'
+      pushRemote: true
+      registry: harbor.demandcluster.com
+timeout: 60
+notification: {}
