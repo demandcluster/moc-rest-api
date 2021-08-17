@@ -13,7 +13,7 @@ stages:
       sourceKey: PORT
   - runScriptConfig:
       image: node:latest
-      shellScript: yarn run lint
+      shellScript: yarn install --production=false && yarn run lint
 - name: Release
   steps:
   - runScriptConfig:
