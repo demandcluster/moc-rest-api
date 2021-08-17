@@ -11,11 +11,9 @@ stages:
       sourceKey: GRAPHQL_URL
     - sourceName: rest-api
       sourceKey: PORT
-- name: Lint
-  steps:
   - runScriptConfig:
       image: node:latest
-      shellScript: npm run lint
+      shellScript: yarn run lint
 - name: Release
   steps:
   - runScriptConfig:
