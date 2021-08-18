@@ -35,5 +35,15 @@ const restRouter = GraphQL2REST.init(schema, executeGqlLink, gql2restOptions);
 // restRouter now has our REST API attached
 app.use('/', restRouter);
 
+app.listen(3000);
+     //env.PORT,
+    // log(chalk.yellow(`DemandCluster MOC REST`)),
+    // log(
+    //   chalk.green(
+    //     `API Server running in ${env.NODE_ENV} mode on port ${env.PORT}`
+    //   )
+    // )
+  //);
+
 }
 module.exports=server;
