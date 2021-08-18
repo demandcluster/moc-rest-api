@@ -15,7 +15,7 @@ process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 const server = ()=>{
 const app = express();
 
-const gqlServerUri = 'https://api.demandcluster.com/graphql'; // our existing remote GraphQL server
+const gqlServerUri = env.GRAPHQL_URL; // our existing remote GraphQL server
 
 const link = createHttpLink({ uri: gqlServerUri, fetch });
 
