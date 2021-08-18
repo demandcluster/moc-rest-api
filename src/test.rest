@@ -1,3 +1,0 @@
-POST https://rest.demandcluster.com/api/capture-order-payments
-?input=\{orderId:1\}
-&order-id=1

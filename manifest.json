@@ -1,7 +1,11 @@
 {"endpoints": {
-	"/items": {  
+	"/items/:shopId/:searchQuery": {  
 		"get": {     
-			"operation": "catalogItems"
+			"operation": "catalogItems",
+			"params":{
+				"shop":"shopId",
+				"search": "searchQuery"
+			}
 		}
 	}
 }
