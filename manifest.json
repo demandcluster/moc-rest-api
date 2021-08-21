@@ -1,5 +1,5 @@
 {"endpoints": {
-	"/items/:shopId/:searchQuery": {  
+	"/items/:language/:shopId/:searchQuery": {  
 		"get": {     
 			"operation": "catalogItems",
 			"params":{

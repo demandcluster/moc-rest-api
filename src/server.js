@@ -12,6 +12,7 @@ const express = require('express');
 //require('https').globalAgent.options.ca = require('ssl-root-cas').create();
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 
+
 const server = ()=>{
 const app = express();
 
@@ -29,7 +30,8 @@ const GQL_FILES_FOLDER = path.resolve(__dirname,'./gqlFilesFolder'); // folder p
 const gql2restOptions = {
 	apiPrefix: env.PREFIX, //sets the API base path url
 	manifestFile: path.resolve(__dirname,'../manifest.json'), //pathname of manifest file. Default is ./manifest.json
-	gqlGeneratorOutputFolder: GQL_FILES_FOLDER  //.gql files folder
+	gqlGeneratorOutputFolder: GQL_FILES_FOLDER,  //.gql files folder
+  depthLimitArg: 2 // max depth of query
 };
 
 const restRouter = GraphQL2REST.init(schema, executeGqlLink, gql2restOptions);
