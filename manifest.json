@@ -1,12 +1,14 @@
 {"endpoints": {
-	"/items/:language/:shopId/:searchQuery": {  
+	"/items/:shopId/:language/:language1/:searchQuery": {  
 		"get": {     
 			"operation": "catalogItems",
 			"params":{
 				"shop":"shopId",
-				"search": "searchQuery"
+				"search": "searchQuery",
+				"language": "language",
+				"language1": "language1"
 			}
 		}
 	}
-}
+  }
 }

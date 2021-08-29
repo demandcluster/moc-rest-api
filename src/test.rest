@@ -1,0 +1,3 @@
+POST rest.demandcluster.com/api/address/cmVhY3Rpb24vc2hvcDpkOHVHWnd0UmZwUGhUeVpxTA==
+?address=\{"address1":"test'\}
+&address1=1
