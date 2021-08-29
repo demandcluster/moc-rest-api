@@ -15,7 +15,7 @@ const server = () => {
   app.use(bodyParser.json());
   app.use(
     "/api",
-    useSofa({ basePath: "/api", schema: exSchema })
+    useSofa({ basePath: "/api", schema: exSchema,depthLimit: 2 })
   );
 
   app.listen(
