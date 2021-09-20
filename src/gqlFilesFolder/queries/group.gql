@@ -153,6 +153,7 @@ query group($after: ConnectionCursor, $before: ConnectionCursor, $first: Connect
                 description
                 emails{
                     address
+                    provides
                     verified
                 }
                 keywords
@@ -204,6 +205,7 @@ query group($after: ConnectionCursor, $before: ConnectionCursor, $first: Connect
                             }
                             emailRecords{
                                 address
+                                provides
                                 verified
                             }
                             firstName
@@ -281,6 +283,7 @@ query group($after: ConnectionCursor, $before: ConnectionCursor, $first: Connect
                             description
                             emails{
                                 address
+                                provides
                                 verified
                             }
                             keywords

@@ -1,0 +1,16 @@
+mutation deleteMerchant($input: deleteMerchantInput){
+    deleteMerchant(input: $input){
+        merchant{
+            id
+            created_at
+            updated_at
+            Merchant{
+                id
+                Name
+                shopId
+                Type
+            }
+            published_at
+        }
+    }
+}

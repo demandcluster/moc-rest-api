@@ -11,6 +11,7 @@ mutation createUser($user: CreateUserInput!){
                 id
                 emails{
                     address
+                    provides
                     verified
                 }
                 username

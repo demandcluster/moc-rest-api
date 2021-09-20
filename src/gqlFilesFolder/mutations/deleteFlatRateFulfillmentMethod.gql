@@ -70,6 +70,7 @@ mutation deleteFlatRateFulfillmentMethod($after: ConnectionCursor, $before: Conn
                 description
                 emails{
                     address
+                    provides
                     verified
                 }
                 keywords
@@ -215,6 +216,7 @@ mutation deleteFlatRateFulfillmentMethod($after: ConnectionCursor, $before: Conn
                                     description
                                     emails{
                                         address
+                                        provides
                                         verified
                                     }
                                     keywords
@@ -263,6 +265,7 @@ mutation deleteFlatRateFulfillmentMethod($after: ConnectionCursor, $before: Conn
                                                 }
                                                 emailRecords{
                                                     address
+                                                    provides
                                                     verified
                                                 }
                                                 firstName

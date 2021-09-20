@@ -1,0 +1,3 @@
+mutation setBuckarooCallbackData($input: Transaction!){
+    setBuckarooCallbackData(input: $input)
+}

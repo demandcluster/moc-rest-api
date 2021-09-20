@@ -1,3 +1,11 @@
-POST rest.demandcluster.com/api/address/cmVhY3Rpb24vc2hvcDpkOHVHWnd0UmZwUGhUeVpxTA==
-?address=\{"address1":"test'\}
-&address1=1
+POST https://rest.demandcluster.com/api/buckaroo 
+
+{
+    "Key": "123",
+    "Invoice": "inv123",
+    "ServiceCode": 69,
+    "CustomerName": "Mahmoud",
+    "PayerHash": "abcabcabchash",
+    "PaymentKey": "thekey",
+    "Status": "paid"  
+}

@@ -134,6 +134,7 @@ query invitations($after: ConnectionCursor, $before: ConnectionCursor, $first: C
                             description
                             emails{
                                 address
+                                provides
                                 verified
                             }
                             keywords
@@ -185,6 +186,7 @@ query invitations($after: ConnectionCursor, $before: ConnectionCursor, $first: C
                                         }
                                         emailRecords{
                                             address
+                                            provides
                                             verified
                                         }
                                         firstName
@@ -262,6 +264,7 @@ query invitations($after: ConnectionCursor, $before: ConnectionCursor, $first: C
                                         description
                                         emails{
                                             address
+                                            provides
                                             verified
                                         }
                                         keywords
@@ -532,6 +535,7 @@ query invitations($after: ConnectionCursor, $before: ConnectionCursor, $first: C
                     }
                     emailRecords{
                         address
+                        provides
                         verified
                     }
                     firstName

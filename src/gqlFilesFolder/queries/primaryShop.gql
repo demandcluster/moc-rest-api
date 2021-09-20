@@ -58,6 +58,7 @@ query primaryShop($after: ConnectionCursor, $before: ConnectionCursor, $first: C
         description
         emails{
             address
+            provides
             verified
         }
         keywords
@@ -203,6 +204,7 @@ query primaryShop($after: ConnectionCursor, $before: ConnectionCursor, $first: C
                             description
                             emails{
                                 address
+                                provides
                                 verified
                             }
                             keywords
@@ -251,6 +253,7 @@ query primaryShop($after: ConnectionCursor, $before: ConnectionCursor, $first: C
                                         }
                                         emailRecords{
                                             address
+                                            provides
                                             verified
                                         }
                                         firstName
@@ -328,6 +331,7 @@ query primaryShop($after: ConnectionCursor, $before: ConnectionCursor, $first: C
                                         description
                                         emails{
                                             address
+                                            provides
                                             verified
                                         }
                                         keywords

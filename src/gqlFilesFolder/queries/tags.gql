@@ -80,6 +80,7 @@ query tags($after: ConnectionCursor, $before: ConnectionCursor, $first: Connecti
                     description
                     emails{
                         address
+                        provides
                         verified
                     }
                     keywords
@@ -226,6 +227,7 @@ query tags($after: ConnectionCursor, $before: ConnectionCursor, $first: Connecti
                                     description
                                     emails{
                                         address
+                                        provides
                                         verified
                                     }
                                     keywords
@@ -438,6 +440,7 @@ query tags($after: ConnectionCursor, $before: ConnectionCursor, $first: Connecti
                                 }
                                 emailRecords{
                                     address
+                                    provides
                                     verified
                                 }
                                 firstName

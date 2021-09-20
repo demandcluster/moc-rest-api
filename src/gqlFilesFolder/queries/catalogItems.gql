@@ -64,6 +64,7 @@ query catalogItems($after: ConnectionCursor, $before: ConnectionCursor, $first: 
                     description
                     emails{
                         address
+                        provides
                         verified
                     }
                     keywords
@@ -210,6 +211,7 @@ query catalogItems($after: ConnectionCursor, $before: ConnectionCursor, $first: 
                                     description
                                     emails{
                                         address
+                                        provides
                                         verified
                                     }
                                     keywords
@@ -425,6 +427,7 @@ query catalogItems($after: ConnectionCursor, $before: ConnectionCursor, $first: 
                                 }
                                 emailRecords{
                                     address
+                                    provides
                                     verified
                                 }
                                 firstName

@@ -1,0 +1,22 @@
+mutation multipleUpload($sort: String, $limit: Int, $start: Int, $where: JSON, $refId: ID, $ref: String, $field: String, $source: String, $files: [Upload]!){
+    multipleUpload(refId: $refId, ref: $ref, field: $field, source: $source, files: $files){
+        id
+        created_at
+        updated_at
+        name
+        alternativeText
+        caption
+        width
+        height
+        formats
+        hash
+        ext
+        mime
+        size
+        url
+        previewUrl
+        provider
+        provider_metadata
+        related(sort: $sort, limit: $limit, start: $start, where: $where)
+    }
+}

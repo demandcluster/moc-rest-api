@@ -1,0 +1,14 @@
+query merchant($id: ID!, $publicationState: PublicationState){
+    merchant(id: $id, publicationState: $publicationState){
+        id
+        created_at
+        updated_at
+        Merchant{
+            id
+            Name
+            shopId
+            Type
+        }
+        published_at
+    }
+}

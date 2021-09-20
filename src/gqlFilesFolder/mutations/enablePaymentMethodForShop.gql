@@ -3,14 +3,7 @@ mutation enablePaymentMethodForShop($input: EnablePaymentMethodForShopInput!){
         clientMutationId
         paymentMethods{
             canRefund
-            data{
-                ... on FakeData {
-                    doNotUse
-                }
-                ... on ExampleIOUPaymentMethodData {
-                    example
-                }
-            }
+            data
             displayName
             isEnabled
             name

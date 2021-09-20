@@ -1,0 +1,22 @@
+query files($sort: String, $limit: Int, $start: Int, $where: JSON, $sort1: String, $limit1: Int, $start1: Int, $where1: JSON, $publicationState: PublicationState){
+    files(sort: $sort1, limit: $limit1, start: $start1, where: $where1, publicationState: $publicationState){
+        id
+        created_at
+        updated_at
+        name
+        alternativeText
+        caption
+        width
+        height
+        formats
+        hash
+        ext
+        mime
+        size
+        url
+        previewUrl
+        provider
+        provider_metadata
+        related(sort: $sort, limit: $limit, start: $start, where: $where)
+    }
+}

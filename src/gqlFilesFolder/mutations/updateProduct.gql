@@ -94,6 +94,7 @@ mutation updateProduct($shouldIncludeVariantMedia: Boolean, $after: ConnectionCu
                 description
                 emails{
                     address
+                    provides
                     verified
                 }
                 keywords
@@ -239,6 +240,7 @@ mutation updateProduct($shouldIncludeVariantMedia: Boolean, $after: ConnectionCu
                                     description
                                     emails{
                                         address
+                                        provides
                                         verified
                                     }
                                     keywords
@@ -287,6 +289,7 @@ mutation updateProduct($shouldIncludeVariantMedia: Boolean, $after: ConnectionCu
                                                 }
                                                 emailRecords{
                                                     address
+                                                    provides
                                                     verified
                                                 }
                                                 firstName

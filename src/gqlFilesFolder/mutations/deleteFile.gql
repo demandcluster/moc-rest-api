@@ -1,0 +1,24 @@
+mutation deleteFile($sort: String, $limit: Int, $start: Int, $where: JSON, $input: deleteFileInput){
+    deleteFile(input: $input){
+        file{
+            id
+            created_at
+            updated_at
+            name
+            alternativeText
+            caption
+            width
+            height
+            formats
+            hash
+            ext
+            mime
+            size
+            url
+            previewUrl
+            provider
+            provider_metadata
+            related(sort: $sort, limit: $limit, start: $start, where: $where)
+        }
+    }
+}

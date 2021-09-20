@@ -9,6 +9,7 @@ mutation authenticate($serviceName: String!, $params: AuthenticateParamsInput!){
             id
             emails{
                 address
+                provides
                 verified
             }
             username

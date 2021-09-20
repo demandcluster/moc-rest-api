@@ -8,6 +8,7 @@ const { createHttpLink } = require('apollo-link-http');
 const fetch = require('node-fetch');
 const log = console.log;
 const express = require('express');
+const bodyParser = require('body-parser');
 // uncomment in case you have direct SSL (not proxy from cloudflare)
 //require('https').globalAgent.options.ca = require('ssl-root-cas').create();
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
@@ -29,15 +30,21 @@ const GQL_FILES_FOLDER = path.resolve(__dirname,'./gqlFilesFolder'); // folder p
 
 const gql2restOptions = {
 	apiPrefix: env.PREFIX, //sets the API base path url
+  middlewaresFile: path.resolve(__dirname, './middleware.js'), 
 	manifestFile: path.resolve(__dirname,'../manifest.json'), //pathname of manifest file. Default is ./manifest.json
 	gqlGeneratorOutputFolder: GQL_FILES_FOLDER,  //.gql files folder
-  depthLimitArg: 2 // max depth of query
+  depthLimitArg: 5 // max depth of query
 };
+
 
 const restRouter = GraphQL2REST.init(schema, executeGqlLink, gql2restOptions);
 
+// parse application/json
+app.use(bodyParser.json());
+
 // restRouter now has our REST API attached
 app.use('/', restRouter);
+
 
 app.listen(
      env.PORT,
@@ -50,7 +57,7 @@ app.listen(
   );
   process.on('uncaughtException', function (err) {
     log(chalk.yellow(err.stack));
-    log(chalk.red("NODE CRASHED: exiting"));
+    log(chalk.red("NODE CRASHED: exiting "));
     process.exit(1);
   });
 }

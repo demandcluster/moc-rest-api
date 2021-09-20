@@ -85,6 +85,7 @@ mutation createDiscountCode($after: ConnectionCursor, $before: ConnectionCursor,
                 description
                 emails{
                     address
+                    provides
                     verified
                 }
                 keywords
@@ -230,6 +231,7 @@ mutation createDiscountCode($after: ConnectionCursor, $before: ConnectionCursor,
                                     description
                                     emails{
                                         address
+                                        provides
                                         verified
                                     }
                                     keywords
@@ -278,6 +280,7 @@ mutation createDiscountCode($after: ConnectionCursor, $before: ConnectionCursor,
                                                 }
                                                 emailRecords{
                                                     address
+                                                    provides
                                                     verified
                                                 }
                                                 firstName

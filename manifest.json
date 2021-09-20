@@ -1,13 +1,20 @@
 {"endpoints": {
-	"/items/:shopId/:language/:language1/:searchQuery": {  
+	"/items/:shopId/:language/:language1/:search": {  
 		"get": {     
 			"operation": "catalogItems",
 			"params":{
-				"shop":"shopId",
-				"search": "searchQuery",
+				"shopId":"shopId",
+				"searchQuery": "search",
 				"language": "language",
 				"language1": "language1"
 			}
+		}
+	},
+	"/buckaroo":{
+		"post": {
+			"operation":"setBuckarooCallbackData",
+		    "wrapRequestBodyWith":"input",
+			"successStatusCode": 201
 		}
 	}
   }

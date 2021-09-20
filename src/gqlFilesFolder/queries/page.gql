@@ -1,0 +1,9 @@
+query page($id: ID!, $publicationState: PublicationState){
+    page(id: $id, publicationState: $publicationState){
+        id
+        created_at
+        updated_at
+        Body
+        published_at
+    }
+}

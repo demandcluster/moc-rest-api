@@ -151,6 +151,7 @@ mutation addAccountEmailRecord($after: ConnectionCursor, $before: ConnectionCurs
                 description
                 emails{
                     address
+                    provides
                     verified
                 }
                 keywords
@@ -278,6 +279,7 @@ mutation addAccountEmailRecord($after: ConnectionCursor, $before: ConnectionCurs
                                             description
                                             emails{
                                                 address
+                                                provides
                                                 verified
                                             }
                                             keywords
@@ -450,6 +452,7 @@ mutation addAccountEmailRecord($after: ConnectionCursor, $before: ConnectionCurs
                             }
                             emailRecords{
                                 address
+                                provides
                                 verified
                             }
                             firstName
@@ -499,6 +502,7 @@ mutation addAccountEmailRecord($after: ConnectionCursor, $before: ConnectionCurs
             }
             emailRecords{
                 address
+                provides
                 verified
             }
             firstName

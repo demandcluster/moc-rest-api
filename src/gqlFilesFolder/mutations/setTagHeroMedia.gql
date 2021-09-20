@@ -79,6 +79,7 @@ mutation setTagHeroMedia($after: ConnectionCursor, $before: ConnectionCursor, $f
                 description
                 emails{
                     address
+                    provides
                     verified
                 }
                 keywords
@@ -224,6 +225,7 @@ mutation setTagHeroMedia($after: ConnectionCursor, $before: ConnectionCursor, $f
                                     description
                                     emails{
                                         address
+                                        provides
                                         verified
                                     }
                                     keywords
@@ -272,6 +274,7 @@ mutation setTagHeroMedia($after: ConnectionCursor, $before: ConnectionCursor, $f
                                                 }
                                                 emailRecords{
                                                     address
+                                                    provides
                                                     verified
                                                 }
                                                 firstName

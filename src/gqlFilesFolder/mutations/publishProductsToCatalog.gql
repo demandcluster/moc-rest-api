@@ -119,6 +119,7 @@ mutation publishProductsToCatalog($after: ConnectionCursor, $before: ConnectionC
                 description
                 emails{
                     address
+                    provides
                     verified
                 }
                 keywords
@@ -264,6 +265,7 @@ mutation publishProductsToCatalog($after: ConnectionCursor, $before: ConnectionC
                                     description
                                     emails{
                                         address
+                                        provides
                                         verified
                                     }
                                     keywords
@@ -312,6 +314,7 @@ mutation publishProductsToCatalog($after: ConnectionCursor, $before: ConnectionC
                                                 }
                                                 emailRecords{
                                                     address
+                                                    provides
                                                     verified
                                                 }
                                                 firstName

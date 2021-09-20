@@ -1,7 +1,9 @@
-query getApiKeys($shopId: String!, $title: String!){
+query getApiKeys($shopId: String!, $title: String){
     getApiKeys(shopId: $shopId, title: $title){
         apiKey
         channel
+        comment
+        secret
         title
     }
 }

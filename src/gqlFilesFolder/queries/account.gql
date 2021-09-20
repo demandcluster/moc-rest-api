@@ -150,6 +150,7 @@ query account($after: ConnectionCursor, $before: ConnectionCursor, $first: Conne
             description
             emails{
                 address
+                provides
                 verified
             }
             keywords
@@ -277,6 +278,7 @@ query account($after: ConnectionCursor, $before: ConnectionCursor, $first: Conne
                                         description
                                         emails{
                                             address
+                                            provides
                                             verified
                                         }
                                         keywords
@@ -449,6 +451,7 @@ query account($after: ConnectionCursor, $before: ConnectionCursor, $first: Conne
                         }
                         emailRecords{
                             address
+                            provides
                             verified
                         }
                         firstName
@@ -498,6 +501,7 @@ query account($after: ConnectionCursor, $before: ConnectionCursor, $first: Conne
         }
         emailRecords{
             address
+            provides
             verified
         }
         firstName

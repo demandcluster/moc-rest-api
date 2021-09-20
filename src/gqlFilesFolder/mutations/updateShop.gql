@@ -60,6 +60,7 @@ mutation updateShop($after: ConnectionCursor, $before: ConnectionCursor, $first:
             description
             emails{
                 address
+                provides
                 verified
             }
             keywords
@@ -205,6 +206,7 @@ mutation updateShop($after: ConnectionCursor, $before: ConnectionCursor, $first:
                                 description
                                 emails{
                                     address
+                                    provides
                                     verified
                                 }
                                 keywords
@@ -253,6 +255,7 @@ mutation updateShop($after: ConnectionCursor, $before: ConnectionCursor, $first:
                                             }
                                             emailRecords{
                                                 address
+                                                provides
                                                 verified
                                             }
                                             firstName

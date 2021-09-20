@@ -1,5 +1,5 @@
-query productsByTagId($shopId: ID!, $tagId: ID!, $after: ConnectionCursor, $before: ConnectionCursor, $first: ConnectionLimitInt, $last: ConnectionLimitInt, $offset: Int){
-    productsByTagId(shopId: $shopId, tagId: $tagId, after: $after, before: $before, first: $first, last: $last, offset: $offset){
+query productsByTagId($shopId: ID!, $tagId: ID!, $query: String, $after: ConnectionCursor, $before: ConnectionCursor, $first: ConnectionLimitInt, $last: ConnectionLimitInt, $offset: Int){
+    productsByTagId(shopId: $shopId, tagId: $tagId, query: $query, after: $after, before: $before, first: $first, last: $last, offset: $offset){
         edges{
             cursor
             node{

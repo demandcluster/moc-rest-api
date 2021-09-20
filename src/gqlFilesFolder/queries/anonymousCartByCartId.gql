@@ -152,6 +152,7 @@ query anonymousCartByCartId($after: ConnectionCursor, $before: ConnectionCursor,
                 description
                 emails{
                     address
+                    provides
                     verified
                 }
                 keywords
@@ -279,6 +280,7 @@ query anonymousCartByCartId($after: ConnectionCursor, $before: ConnectionCursor,
                                             description
                                             emails{
                                                 address
+                                                provides
                                                 verified
                                             }
                                             keywords
@@ -451,6 +453,7 @@ query anonymousCartByCartId($after: ConnectionCursor, $before: ConnectionCursor,
                             }
                             emailRecords{
                                 address
+                                provides
                                 verified
                             }
                             firstName
@@ -500,6 +503,7 @@ query anonymousCartByCartId($after: ConnectionCursor, $before: ConnectionCursor,
             }
             emailRecords{
                 address
+                provides
                 verified
             }
             firstName
@@ -594,6 +598,10 @@ query anonymousCartByCartId($after: ConnectionCursor, $before: ConnectionCursor,
                     }
                 }
                 items{
+                    inventoryAvailableToSell
+                    isBackorder
+                    isLowQuantity
+                    isSoldOut
                     _id
                     addedAt
                     attributes{
@@ -724,10 +732,6 @@ query anonymousCartByCartId($after: ConnectionCursor, $before: ConnectionCursor,
                     title
                     updatedAt
                     variantTitle
-                    inventoryAvailableToSell
-                    isBackorder
-                    isLowQuantity
-                    isSoldOut
                     isTaxable
                     tax{
                         amount
@@ -933,6 +937,10 @@ query anonymousCartByCartId($after: ConnectionCursor, $before: ConnectionCursor,
                 cursor
             }
             nodes{
+                inventoryAvailableToSell
+                isBackorder
+                isLowQuantity
+                isSoldOut
                 _id
                 addedAt
                 attributes{
@@ -987,10 +995,6 @@ query anonymousCartByCartId($after: ConnectionCursor, $before: ConnectionCursor,
                 title
                 updatedAt
                 variantTitle
-                inventoryAvailableToSell
-                isBackorder
-                isLowQuantity
-                isSoldOut
                 isTaxable
                 tax{
                     amount
@@ -1017,6 +1021,10 @@ query anonymousCartByCartId($after: ConnectionCursor, $before: ConnectionCursor,
             totalCount
         }
         missingItems{
+            inventoryAvailableToSell
+            isBackorder
+            isLowQuantity
+            isSoldOut
             _id
             addedAt
             attributes{
@@ -1093,10 +1101,6 @@ query anonymousCartByCartId($after: ConnectionCursor, $before: ConnectionCursor,
             title
             updatedAt
             variantTitle
-            inventoryAvailableToSell
-            isBackorder
-            isLowQuantity
-            isSoldOut
             isTaxable
             tax{
                 amount
@@ -1169,6 +1173,31 @@ query anonymousCartByCartId($after: ConnectionCursor, $before: ConnectionCursor,
                 sourcing
                 taxName
             }
+        }
+        billingAddress{
+            _id
+            address1
+            address2
+            city
+            company
+            country
+            firstName
+            fullName
+            isBillingDefault
+            isCommercial
+            isShippingDefault
+            lastName
+            metafields{
+                description
+                key
+                namespace
+                scope
+                value
+                valueType
+            }
+            phone
+            postal
+            region
         }
     }
 }

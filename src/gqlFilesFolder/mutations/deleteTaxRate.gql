@@ -66,6 +66,7 @@ mutation deleteTaxRate($after: ConnectionCursor, $before: ConnectionCursor, $fir
                 description
                 emails{
                     address
+                    provides
                     verified
                 }
                 keywords
@@ -211,6 +212,7 @@ mutation deleteTaxRate($after: ConnectionCursor, $before: ConnectionCursor, $fir
                                     description
                                     emails{
                                         address
+                                        provides
                                         verified
                                     }
                                     keywords
@@ -259,6 +261,7 @@ mutation deleteTaxRate($after: ConnectionCursor, $before: ConnectionCursor, $fir
                                                 }
                                                 emailRecords{
                                                     address
+                                                    provides
                                                     verified
                                                 }
                                                 firstName

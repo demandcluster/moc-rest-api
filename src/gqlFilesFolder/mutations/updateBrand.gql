@@ -1,0 +1,33 @@
+mutation updateBrand($sort: String, $limit: Int, $start: Int, $where: JSON, $input: updateBrandInput){
+    updateBrand(input: $input){
+        brand{
+            id
+            created_at
+            updated_at
+            name
+            logo{
+                id
+                created_at
+                updated_at
+                name
+                alternativeText
+                caption
+                width
+                height
+                formats
+                hash
+                ext
+                mime
+                size
+                url
+                previewUrl
+                provider
+                provider_metadata
+                related(sort: $sort, limit: $limit, start: $start, where: $where)
+            }
+            description
+            ranking
+            published_at
+        }
+    }
+}

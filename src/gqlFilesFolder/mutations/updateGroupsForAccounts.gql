@@ -152,6 +152,7 @@ mutation updateGroupsForAccounts($after: ConnectionCursor, $before: ConnectionCu
                 description
                 emails{
                     address
+                    provides
                     verified
                 }
                 keywords
@@ -279,6 +280,7 @@ mutation updateGroupsForAccounts($after: ConnectionCursor, $before: ConnectionCu
                                             description
                                             emails{
                                                 address
+                                                provides
                                                 verified
                                             }
                                             keywords
@@ -451,6 +453,7 @@ mutation updateGroupsForAccounts($after: ConnectionCursor, $before: ConnectionCu
                             }
                             emailRecords{
                                 address
+                                provides
                                 verified
                             }
                             firstName
@@ -500,6 +503,7 @@ mutation updateGroupsForAccounts($after: ConnectionCursor, $before: ConnectionCu
             }
             emailRecords{
                 address
+                provides
                 verified
             }
             firstName

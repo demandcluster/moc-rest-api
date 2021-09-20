@@ -9,6 +9,7 @@ mutation refreshTokens($accessToken: String!, $refreshToken: String!){
             id
             emails{
                 address
+                provides
                 verified
             }
             username

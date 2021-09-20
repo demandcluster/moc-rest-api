@@ -61,6 +61,7 @@ query shops($after: ConnectionCursor, $before: ConnectionCursor, $first: Connect
                 description
                 emails{
                     address
+                    provides
                     verified
                 }
                 keywords
@@ -207,6 +208,7 @@ query shops($after: ConnectionCursor, $before: ConnectionCursor, $first: Connect
                                 description
                                 emails{
                                     address
+                                    provides
                                     verified
                                 }
                                 keywords
@@ -319,6 +321,7 @@ query shops($after: ConnectionCursor, $before: ConnectionCursor, $first: Connect
                                             description
                                             emails{
                                                 address
+                                                provides
                                                 verified
                                             }
                                             keywords
@@ -485,6 +488,7 @@ query shops($after: ConnectionCursor, $before: ConnectionCursor, $first: Connect
                             }
                             emailRecords{
                                 address
+                                provides
                                 verified
                             }
                             firstName
@@ -577,6 +581,7 @@ query shops($after: ConnectionCursor, $before: ConnectionCursor, $first: Connect
             description
             emails{
                 address
+                provides
                 verified
             }
             keywords

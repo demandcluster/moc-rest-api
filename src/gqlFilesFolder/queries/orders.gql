@@ -130,6 +130,7 @@ query orders($after: ConnectionCursor, $before: ConnectionCursor, $first: Connec
                         description
                         emails{
                             address
+                            provides
                             verified
                         }
                         keywords
@@ -257,6 +258,7 @@ query orders($after: ConnectionCursor, $before: ConnectionCursor, $first: Connec
                                                     description
                                                     emails{
                                                         address
+                                                        provides
                                                         verified
                                                     }
                                                     keywords
@@ -429,6 +431,7 @@ query orders($after: ConnectionCursor, $before: ConnectionCursor, $first: Connec
                                     }
                                     emailRecords{
                                         address
+                                        provides
                                         verified
                                     }
                                     firstName
@@ -478,6 +481,7 @@ query orders($after: ConnectionCursor, $before: ConnectionCursor, $first: Connec
                     }
                     emailRecords{
                         address
+                        provides
                         verified
                     }
                     firstName
@@ -503,41 +507,14 @@ query orders($after: ConnectionCursor, $before: ConnectionCursor, $first: Connec
                         totalCount
                     }
                 }
+                billingName
                 cartId
                 createdAt
                 displayStatus(language: $language2)
                 email
                 fulfillmentGroups{
                     _id
-                    data{
-                        ... on ShippingOrderFulfillmentGroupData {
-                            shippingAddress{
-                                _id
-                                address1
-                                address2
-                                city
-                                company
-                                country
-                                firstName
-                                fullName
-                                isBillingDefault
-                                isCommercial
-                                isShippingDefault
-                                lastName
-                                metafields{
-                                    description
-                                    key
-                                    namespace
-                                    scope
-                                    value
-                                    valueType
-                                }
-                                phone
-                                postal
-                                region
-                            }
-                        }
-                    }
+                    data
                     displayStatus(language: $language3)
                     items(after: $after12, before: $before12, first: $first12, last: $last12, offset: $offset12, sortOrder: $sortOrder10, sortBy: $sortBy10){
                         edges{
@@ -923,38 +900,13 @@ query orders($after: ConnectionCursor, $before: ConnectionCursor, $first: Connec
                     captureErrorMessage
                     cardBrand
                     createdAt
-                    data{
-                        ... on FakeData {
-                            doNotUse
-                        }
-                        ... on StripeCardPaymentData {
-                            chargeId
-                            customerId
-                        }
-                        ... on ExampleIOUPaymentData {
-                            fullName
-                        }
-                        ... on BuckarooPaymentData {
-                            Amount
-                            Currency
-                            InvoiceNumber
-                            Service
-                            Websitekey
-                        }
-                    }
+                    data
                     displayName
                     isAuthorizationCanceled
                     isCaptured
                     method{
                         canRefund
-                        data{
-                            ... on FakeData {
-                                doNotUse
-                            }
-                            ... on ExampleIOUPaymentMethodData {
-                                example
-                            }
-                        }
+                        data
                         displayName
                         isEnabled
                         name
@@ -1032,17 +984,14 @@ query orders($after: ConnectionCursor, $before: ConnectionCursor, $first: Connec
                 userId
                 username
             }
+            billingName
             cartId
             createdAt
             displayStatus(language: $language5)
             email
             fulfillmentGroups{
                 _id
-                data{
-                    ... on ShippingOrderFulfillmentGroupData {
-
-                    }
-                }
+                data
                 displayStatus(language: $language6)
                 shippingLabelUrl
                 status
@@ -1062,25 +1011,7 @@ query orders($after: ConnectionCursor, $before: ConnectionCursor, $first: Connec
                 captureErrorMessage
                 cardBrand
                 createdAt
-                data{
-                    ... on FakeData {
-                        doNotUse
-                    }
-                    ... on StripeCardPaymentData {
-                        chargeId
-                        customerId
-                    }
-                    ... on ExampleIOUPaymentData {
-                        fullName
-                    }
-                    ... on BuckarooPaymentData {
-                        Amount
-                        Currency
-                        InvoiceNumber
-                        Service
-                        Websitekey
-                    }
-                }
+                data
                 displayName
                 isAuthorizationCanceled
                 isCaptured

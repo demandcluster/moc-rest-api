@@ -1,0 +1,9 @@
+query pages($sort: String, $limit: Int, $start: Int, $where: JSON, $publicationState: PublicationState){
+    pages(sort: $sort, limit: $limit, start: $start, where: $where, publicationState: $publicationState){
+        id
+        created_at
+        updated_at
+        Body
+        published_at
+    }
+}

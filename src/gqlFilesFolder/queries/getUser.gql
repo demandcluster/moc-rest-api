@@ -3,6 +3,7 @@ query getUser{
         id
         emails{
             address
+            provides
             verified
         }
         username

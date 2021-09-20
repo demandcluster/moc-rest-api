@@ -95,6 +95,7 @@ query products($shouldIncludeVariantMedia: Boolean, $after: ConnectionCursor, $b
                     description
                     emails{
                         address
+                        provides
                         verified
                     }
                     keywords
@@ -241,6 +242,7 @@ query products($shouldIncludeVariantMedia: Boolean, $after: ConnectionCursor, $b
                                     description
                                     emails{
                                         address
+                                        provides
                                         verified
                                     }
                                     keywords
@@ -456,6 +458,7 @@ query products($shouldIncludeVariantMedia: Boolean, $after: ConnectionCursor, $b
                                 }
                                 emailRecords{
                                     address
+                                    provides
                                     verified
                                 }
                                 firstName

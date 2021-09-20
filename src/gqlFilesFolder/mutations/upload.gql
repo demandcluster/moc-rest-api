@@ -1,0 +1,22 @@
+mutation upload($sort: String, $limit: Int, $start: Int, $where: JSON, $refId: ID, $ref: String, $field: String, $source: String, $info: FileInfoInput, $file: Upload!){
+    upload(refId: $refId, ref: $ref, field: $field, source: $source, info: $info, file: $file){
+        id
+        created_at
+        updated_at
+        name
+        alternativeText
+        caption
+        width
+        height
+        formats
+        hash
+        ext
+        mime
+        size
+        url
+        previewUrl
+        provider
+        provider_metadata
+        related(sort: $sort, limit: $limit, start: $start, where: $where)
+    }
+}

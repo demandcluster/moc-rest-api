@@ -67,6 +67,7 @@ query taxRates($after: ConnectionCursor, $before: ConnectionCursor, $first: Conn
                     description
                     emails{
                         address
+                        provides
                         verified
                     }
                     keywords
@@ -213,6 +214,7 @@ query taxRates($after: ConnectionCursor, $before: ConnectionCursor, $first: Conn
                                     description
                                     emails{
                                         address
+                                        provides
                                         verified
                                     }
                                     keywords
@@ -428,6 +430,7 @@ query taxRates($after: ConnectionCursor, $before: ConnectionCursor, $first: Conn
                                 }
                                 emailRecords{
                                     address
+                                    provides
                                     verified
                                 }
                                 firstName

@@ -132,6 +132,7 @@ mutation createProductVariant($after: ConnectionCursor, $before: ConnectionCurso
                         description
                         emails{
                             address
+                            provides
                             verified
                         }
                         keywords
@@ -277,6 +278,7 @@ mutation createProductVariant($after: ConnectionCursor, $before: ConnectionCurso
                                             description
                                             emails{
                                                 address
+                                                provides
                                                 verified
                                             }
                                             keywords
@@ -325,6 +327,7 @@ mutation createProductVariant($after: ConnectionCursor, $before: ConnectionCurso
                                                         }
                                                         emailRecords{
                                                             address
+                                                            provides
                                                             verified
                                                         }
                                                         firstName

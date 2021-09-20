@@ -80,6 +80,7 @@ mutation addTag($after: ConnectionCursor, $before: ConnectionCursor, $first: Con
                 description
                 emails{
                     address
+                    provides
                     verified
                 }
                 keywords
@@ -225,6 +226,7 @@ mutation addTag($after: ConnectionCursor, $before: ConnectionCursor, $first: Con
                                     description
                                     emails{
                                         address
+                                        provides
                                         verified
                                     }
                                     keywords
@@ -273,6 +275,7 @@ mutation addTag($after: ConnectionCursor, $before: ConnectionCursor, $first: Con
                                                 }
                                                 emailRecords{
                                                     address
+                                                    provides
                                                     verified
                                                 }
                                                 firstName

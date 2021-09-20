@@ -1,0 +1,40 @@
+mutation updateRole($sort: String, $limit: Int, $start: Int, $where: JSON, $sort1: String, $limit1: Int, $start1: Int, $where1: JSON, $input: updateRoleInput){
+    updateRole(input: $input){
+        role{
+            id
+            name
+            description
+            type
+            permissions(sort: $sort1, limit: $limit1, start: $start1, where: $where1){
+                id
+                type
+                controller
+                action
+                enabled
+                policy
+                role{
+                    id
+                    name
+                    description
+                    type
+                    users(sort: $sort, limit: $limit, start: $start, where: $where){
+                        id
+                        created_at
+                        updated_at
+                        username
+                        email
+                        provider
+                        confirmed
+                        blocked
+                        role{
+                            id
+                            name
+                            description
+                            type
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

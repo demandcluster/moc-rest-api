@@ -58,6 +58,7 @@ query shopBySlug($after: ConnectionCursor, $before: ConnectionCursor, $first: Co
         description
         emails{
             address
+            provides
             verified
         }
         keywords
@@ -203,6 +204,7 @@ query shopBySlug($after: ConnectionCursor, $before: ConnectionCursor, $first: Co
                             description
                             emails{
                                 address
+                                provides
                                 verified
                             }
                             keywords
@@ -251,6 +253,7 @@ query shopBySlug($after: ConnectionCursor, $before: ConnectionCursor, $first: Co
                                         }
                                         emailRecords{
                                             address
+                                            provides
                                             verified
                                         }
                                         firstName
@@ -328,6 +331,7 @@ query shopBySlug($after: ConnectionCursor, $before: ConnectionCursor, $first: Co
                                         description
                                         emails{
                                             address
+                                            provides
                                             verified
                                         }
                                         keywords

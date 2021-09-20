@@ -1,0 +1,14 @@
+query merchants($sort: String, $limit: Int, $start: Int, $where: JSON, $publicationState: PublicationState){
+    merchants(sort: $sort, limit: $limit, start: $start, where: $where, publicationState: $publicationState){
+        id
+        created_at
+        updated_at
+        Merchant{
+            id
+            Name
+            shopId
+            Type
+        }
+        published_at
+    }
+}

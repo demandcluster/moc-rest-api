@@ -1,0 +1,11 @@
+mutation updatePage($input: updatePageInput){
+    updatePage(input: $input){
+        page{
+            id
+            created_at
+            updated_at
+            Body
+            published_at
+        }
+    }
+}

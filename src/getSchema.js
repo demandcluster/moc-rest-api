@@ -15,8 +15,11 @@ async function getSchema(endpoint, filename) {
   });
   const graphqlSchemaObj = buildClientSchema((await response.json()).data);
   const sdlString = printSchema(graphqlSchemaObj);
-  console.log(sdlString);
+  //console.log(sdlString);
+
   fs.writeFileSync(filename, sdlString);
+
+  return graphqlSchemaObj;
 }
 
 module.exports = getSchema;

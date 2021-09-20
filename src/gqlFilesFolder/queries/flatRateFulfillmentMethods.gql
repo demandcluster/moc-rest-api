@@ -71,6 +71,7 @@ query flatRateFulfillmentMethods($after: ConnectionCursor, $before: ConnectionCu
                     description
                     emails{
                         address
+                        provides
                         verified
                     }
                     keywords
@@ -217,6 +218,7 @@ query flatRateFulfillmentMethods($after: ConnectionCursor, $before: ConnectionCu
                                     description
                                     emails{
                                         address
+                                        provides
                                         verified
                                     }
                                     keywords
@@ -432,6 +434,7 @@ query flatRateFulfillmentMethods($after: ConnectionCursor, $before: ConnectionCu
                                 }
                                 emailRecords{
                                     address
+                                    provides
                                     verified
                                 }
                                 firstName
