@@ -11,11 +11,6 @@ stages:
       sourceKey: GRAPHQL_URL
     - sourceName: rest-api
       sourceKey: PORT
-  - runScriptConfig:
-      image: node:latest
-      shellScript: yarn install && yarn run lint
-    env:
-      NODE_ENV: development
 - name: Publish
   steps:
   - runScriptConfig:
