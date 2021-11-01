@@ -13,9 +13,24 @@
 	"/buckaroo":{
 		"post": {
 			"operation":"setBuckarooCallbackData",
-		    "wrapRequestBodyWith":"input",
+			"params": {
+				"input": "Transaction"
+			},
+			"requestMiddlewareFunction":"middlewareFunc",
 			"successStatusCode": 201
 		}
 	}
-  }
+ },
+ "errors": {
+	"errorCodes": {
+		"UNAUTHENTICATED": {
+			"httpCode": 401,
+			"errorDescription": "Forbidden: Unauthorized access"
+		},
+		"X-InternalServerError":{
+			"httpCode": 500,
+			"errorDescription": "Empty object: body parser"
+		}
+	}
+}
 }

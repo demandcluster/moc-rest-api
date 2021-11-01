@@ -1,9 +1,14 @@
-query getApiKeys($shopId: String!, $title: String){
-    getApiKeys(shopId: $shopId, title: $title){
-        apiKey
-        channel
-        comment
-        secret
-        title
+query getApiKeys($first: ConnectionLimitInt, $offset: ConnectionCursor, $shopId: String!, $title: String, $type: String){
+    getApiKeys(first: $first, offset: $offset, shopId: $shopId, title: $title, type: $type){
+        errors
+        nodes{
+            _id
+            apiKey
+            type
+            comment
+            secret
+            title
+        }
+        totalCount
     }
 }

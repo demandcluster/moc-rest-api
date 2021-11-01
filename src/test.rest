@@ -1,11 +1,13 @@
-POST https://rest.demandcluster.com/api/buckaroo 
+POST https://rest.demandcluster.com/api/buckaroo/
+Content-Type: "application/json"
 
-{
-    "Key": "123",
+{ "Transaction": 
+    {"Key": "123",
     "Invoice": "inv123",
-    "ServiceCode": 69,
+    "ServiceCode": "69",
     "CustomerName": "Mahmoud",
     "PayerHash": "abcabcabchash",
     "PaymentKey": "thekey",
-    "Status": "paid"  
+    "Status": { "DateTime":"today" }  
+    }
 }

@@ -1,3 +1,5 @@
 mutation setBuckarooCallbackData($input: Transaction!){
-    setBuckarooCallbackData(input: $input)
+    setBuckarooCallbackData(input: $input){
+        _id
+    }
 }

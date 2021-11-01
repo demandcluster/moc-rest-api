@@ -1,5 +1,6 @@
 mutation updateApiKey($input: UpdateApiKeyInput!){
     updateApiKey(input: $input){
+        _id
         apiKey
         clientMutationId
         comment
